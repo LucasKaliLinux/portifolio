@@ -1,0 +1,111 @@
+
+body{
+    background: #181B1F;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bolhas{
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+.bolhas span{
+    width: 3vw;
+    height: 1.5vw;
+    background: #e5ff00; 
+    margin: 0 1vw;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1vw #e5ff0044,
+    0 0 5vw #e5ff00,
+    0 0 10vw #e5ff00;
+
+    animation: animar calc(100s / var(--i)) linear infinite;
+}
+
+.bolhas span:nth-of-type(even){
+    background: #2dc3ff;
+    box-shadow: 0 0 0 1vw #2dc3ff44,
+    0 0 5vw #2dc3ff,
+    0 0 10vw #2dc3ff;
+}
+
+@keyframes animar {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-30vh) scale(0.35);
+    }
+}
+
+.dev{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn{
+    margin: auto;
+    width: 240px;
+    height: 52px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30px;
+    border: 3px solid #3080F0;
+    position: relative;
+    background: linear-gradient(to top, #3498db 0%, #3498db 0%, #3080F0 50%, #3080F0 100%);
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    transition: 0.45s;
+}
+
+.btn:hover{
+    border: 3px solid #344761;
+    /*background-color: #97b4dd;*/   
+    background-size: 100% 100%;
+    /*animation: btnAnimation 2s ease-in-out 1;*/
+}
+
+.btn a:hover{
+    color: black;
+}
+
+.btn a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #3080F0;
+    padding-top: 7px;
+    transition: 0.45s;
+    position: absolute; /* Adicione esta linha */
+    top: 50%; /* Adicione esta linha */
+    left: 50%; /* Adicione esta linha */
+    transform: translate(-50%, -50%); /* Adicione esta linha */
+}
+
+.dev h1{
+    font-size: 48px;
+}
+
+.dev strong{
+    color: #3080F0;
+    font-size: 50px;
+}
+
+.dev p{
+    color: #a7aeb8;
+    font-size: 20px;
+    padding: 20px 0;
+}

@@ -1,0 +1,73 @@
+@media screen and (max-width: 1228px){
+    section.projetos .project-box{
+        display: block;
+        width: 725px;
+        margin: auto;
+    }
+
+    section.projetos .project-box .project-wrapper{
+        display: block;
+        border: 30px solid #181B1F;
+        box-shadow: none;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    section.projetos .project-box{
+        width: 500px;
+        margin: auto;
+    }
+
+    section.projetos{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    .flex{
+        display: block;
+    }
+    
+    .sidebar{
+        display: none;
+    }
+
+    .center{
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+
+        margin: 0 auto;
+        /*margin-top: 25px;*/
+        max-width: 587px;
+        text-align: center;
+    }
+
+    p{
+        text-align: left;
+    }
+
+    div.content{
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    section.experiencia p{
+        display: inline-block;
+    }
+
+    section.experiencia ul{
+        text-align: left;
+    }
+
+}
+
+
+
