@@ -28,8 +28,9 @@ $(window).on("load", function(){
 
                     // Se a página carregada for "projeto.html" e a largura da janela for menor ou igual a 1228 pixels, executa a função 'slickExe' com os elementos ".project-box".
                     if(href == "projeto.html" && $(window).width() <= 1228){
-                        slickExe($(".project-box"));
+                       
                     }
+                    slickExe($(".project-box"));
 
                 },
                 'error':function(xhr, status, error){
@@ -49,11 +50,20 @@ $(window).on("load", function(){
         // Inicializa o plugin Slick em elementos selecionados.
         select.slick({
             centerMode: false,
-            slidesToShow: 2,
+            slidesToShow: 3,
             arrows: false,
             responsive:[
                 {
-                    breakpoint: 1000,
+                    breakpoint: 1280,
+                    settings:{
+                        arrows:false,
+                        Infinite:false,
+                        centerMode: true,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 1200,
                     settings:{
                         arrows:false,
                         Infinite:false,

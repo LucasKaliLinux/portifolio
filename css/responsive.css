@@ -1,11 +1,12 @@
-@media screen and (max-width: 1228px){
+@media screen and (max-width: 1280px){
     section.projetos .project-box{
+        float: none;
         display: block;
-        width: 725px;
         margin: auto;
     }
 
     section.projetos .project-box .project-wrapper{
+        float: none;
         display: block;
         border: 30px solid #181B1F;
         box-shadow: none;
@@ -13,7 +14,7 @@
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1200px){
     section.projetos .project-box{
         width: 500px;
         margin: auto;

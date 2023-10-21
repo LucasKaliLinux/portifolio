@@ -5,6 +5,10 @@ body{
     overflow-x: hidden;
 }
 
+.clear{
+    clear: both;
+}
+
 /*Estilo slick*/
 
 .slick-dotted ul{
@@ -214,23 +218,27 @@ section.projetos .animation > h3{
 }
 
 section.projetos .project-box{
+    float: left;
+    /*
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0px;*/
+
 }
 
 .project-wrapper{
+    float: left;
+    width: 33.3%;
     background-color: #2663b9;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);
+    /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);*/
     border-radius: 12px;
-    transition: 0.8s;
-}
+    
+    border-left: 15px solid #181B1F;
 
-.project-wrapper:hover{
-    box-shadow: 0 0 10px rgba(24, 23, 23, 0.616);
+    transition: 0.8s;
 }
 
 .project-wrapper > h3{
