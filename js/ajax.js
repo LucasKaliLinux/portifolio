@@ -1,4 +1,5 @@
 $(window).on("load", function(){
+
     menu(); // Chama a função 'menu' quando a página é carregada.
     $('a.selected').click(); // Simula um clique em um elemento com a classe 'selected'.
 
@@ -19,18 +20,27 @@ $(window).on("load", function(){
 
                     // Configura a animação de revelação com o ScrollReveal.
                     window.sr = ScrollReveal();
-                    sr.reveal('.animation', {
+                    /*sr.reveal('.animation', {
                         duration: 1400,
                         origin: 'right',
                         distance: '250px',
                         scale: 1.0
-                    });
+                    });*/
+                    if($(window).width() > 1100){
+                        animationArq({
+                            duration: 1400,
+                            origin: 'right',
+                            distance: '250px',
+                            scale: 1.0
+                        });
+                    }else{
+                        animationArq({duration:1400});
+                    }
 
                     // Se a página carregada for "projeto.html" e a largura da janela for menor ou igual a 1228 pixels, executa a função 'slickExe' com os elementos ".project-box".
-                    if(href == "projeto.html" && $(window).width() <= 1228){
-                       
+                    if(href == "projeto.html" && $(window).width() <= 1228 && $(window).width() > 460){
+                        slickExe($(".project-box"));
                     }
-                    slickExe($(".project-box"));
 
                 },
                 'error':function(xhr, status, error){
@@ -40,6 +50,11 @@ $(window).on("load", function(){
         });
     }
 
+    function animationArq(object){
+        window.sr = ScrollReveal();
+        sr.reveal('.animation', object);
+    }
+
     function selected(select){
         // Remove a classe 'selected' de todos os links nas classes '.menu' e '.menu-mobile' e adiciona-a ao link passado como argumento.
         $('.menu a, .menu-mobile a').removeClass('selected');
@@ -47,30 +62,13 @@ $(window).on("load", function(){
     }
 
     function slickExe(select){
-        // Inicializa o plugin Slick em elementos selecionados.
+
         select.slick({
-            centerMode: false,
-            slidesToShow: 3,
             arrows: false,
+            inifinite: false,
+            centerMode: false,
+            slidesToShow: 2,
             responsive:[
-                {
-                    breakpoint: 1280,
-                    settings:{
-                        arrows:false,
-                        Infinite:false,
-                        centerMode: true,
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings:{
-                        arrows:false,
-                        Infinite:false,
-                        centerMode: true,
-                        slidesToShow: 1
-                    }
-                },
                 {
                     breakpoint: 768,
                     settings:{

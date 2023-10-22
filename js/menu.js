@@ -4,13 +4,14 @@ $(window).on("load", function(){
 
     var mobile = $(".menu-mobile"); // Elemento com a classe "menu-mobile".
     var sideBox = $(".sidebar-box-mobile"); // Elemento com a classe "sidebar-box-mobile".
-
+    
     openWindow(); // Chama a função para abrir a janela.
     closeWindow(); // Chama a função para fechar a janela.
 
     console.log(windowOpen); // Exibe o estado atual da janela no console.
 
     function openWindow(){
+
         // Adiciona um evento de clique ao elemento com a classe "sidebar-mobile".
         $(".sidebar-mobile").click(function(e){
 

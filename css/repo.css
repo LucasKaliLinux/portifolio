@@ -56,6 +56,8 @@ li.slick-active button{
 }
 
 .flex{
+    width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -67,20 +69,20 @@ li.slick-active button{
     background-image: url('../img/icon_menu.png');
     fill: #ffff;
 
-    margin: 20px 0 0 30px;
+    margin: 20px 0 30px 30px;
 }
 
 .sidebar-box-mobile{
     display: none;
 
-    z-index: 5;
-
+    z-index: 999;
+    
     position: fixed;
     left: 0;
     top: 0;
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
     
     background-color: rgba(0, 0, 0, 0.65);
 }
@@ -95,8 +97,8 @@ li.slick-active button{
     width: 200px;
     height: 100%;
 
-    border-right: 6px solid #1c4580;
-    background-color: #3080F0;
+    /*border-right: 6px solid #1c4580;*/
+    background-color: #3b71bd;
 
     text-align: center;
 }
@@ -114,9 +116,9 @@ li.slick-active button{
 .sidebar{
     width: 20%;
     height: 100%;
-    border-right: 6px solid #1c4580;
+    /*border-right: 6px solid #1c4580;*/
     position: fixed;
-    background-color: #3080F0;
+    background-color: #3b71bd;
 }
 
 .sidebar-box{
@@ -141,6 +143,7 @@ li.slick-active button{
     font-size: 26px;
     margin-bottom: 20px;
     opacity: 0.5;
+    padding: 10px;
 }
 
 a.selected{
@@ -218,26 +221,20 @@ section.projetos .animation > h3{
 }
 
 section.projetos .project-box{
-    float: left;
-    /*
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
-    grid-row-gap: 0px;*/
+    grid-row-gap: 0px;
 
 }
 
 .project-wrapper{
-    float: left;
-    width: 33.3%;
+
     background-color: #2663b9;
     padding: 20px;
-    /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);*/
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);
     border-radius: 12px;
-    
-    border-left: 15px solid #181B1F;
-
     transition: 0.8s;
 }
 
