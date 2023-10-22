@@ -68,21 +68,10 @@ body{
     border-radius: 30px;
     border: 3px solid #3080F0;
     position: relative;
-    background: linear-gradient(to top, #3498db 0%, #3498db 0%, #3080F0 50%, #3080F0 100%);
-    background-size: 100% 0;
-    background-repeat: no-repeat;
-    transition: 0.45s;
 }
 
-.btn:hover{
-    border: 3px solid #344761;
-    /*background-color: #97b4dd;*/   
-    background-size: 100% 100%;
-    /*animation: btnAnimation 2s ease-in-out 1;*/
-}
-
-.btn a:hover{
-    color: black;
+.btn:focus{
+    outline: 0;
 }
 
 .btn a{
