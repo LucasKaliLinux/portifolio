@@ -224,7 +224,7 @@ section.projetos .project-box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 20px;
     grid-row-gap: 0px;
 
 }
@@ -232,7 +232,7 @@ section.projetos .project-box{
 .project-wrapper{
 
     background-color: #2663b9;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);
     border-radius: 12px;
     transition: 0.8s;
