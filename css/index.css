@@ -1,6 +1,8 @@
 
 body{
-    background: #181B1F;
+    animation: gradiente 10s ease infinite;
+    background: linear-gradient(-45deg, #060A33, #002d6d, #173381, #000) no-repeat;
+    background-size: 320% 320%;
     min-height: 100vh;
     overflow-y: hidden;
 }
@@ -35,15 +37,6 @@ body{
     box-shadow: 0 0 0 1vw #2dc3ff44,
     0 0 5vw #2dc3ff,
     0 0 10vw #2dc3ff;
-}
-
-@keyframes animar {
-    0%{
-        transform: translateY(100vh) scale(0);
-    }
-    100%{
-        transform: translateY(-30vh) scale(0.35);
-    }
 }
 
 .dev{
@@ -87,10 +80,6 @@ body{
     transform: translate(-50%, -50%); /* Adicione esta linha */
 }
 
-.dev h1{
-    font-size: 48px;
-}
-
 .dev strong{
     color: #3080F0;
     font-size: 50px;
@@ -100,4 +89,63 @@ body{
     color: #a7aeb8;
     font-size: 20px;
     padding: 20px 0;
+}
+
+.text-reveal{
+    overflow: hidden;
+    position: relative;
+}
+
+.text-reveal h1{
+    font-size: 48px;
+    opacity: 0;
+    animation: fade 1ms 0.75s forwards;
+}
+
+.text-reveal::after{
+    background-color: #3080F0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation: text_reveal 1.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+@keyframes animar {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-30vh) scale(0.35);
+    }
+}
+
+@keyframes text_reveal{
+    from{
+        transform: translateX(-101%);
+    }
+    to{
+        transform: translateX(101%);
+    }
+}
+
+@keyframes fade {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes gradiente{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
